@@ -1,0 +1,107 @@
+body {
+    background-color: #031926; /* Color de fondo general */
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* cambia aquí el color del texto */
+  }
+  
+  .btn-primary {
+    background-color: #468187;
+    border-color: #468187;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004d99;
+    border-color: #004d99;
+  }
+
+  input.form-control {
+    background-color: #9dbebb; /* Cambia este color a tu preferido */
+    color: #000000; /* Cambia el color del texto si lo necesitas */
+    border: 0px solid #9dbebb;
+  }
+
+  input.form-control:focus {
+    background-color: #9dbebb; /* Color cuando el input está activo */
+    border-color: #9dbebb;
+    box-shadow: none;
+  }
+
+
+  .custom-navbar {
+    background: linear-gradient(to bottom, #1f4d53, #102d30);
+    background-color: #1f4d53; /* Fallback para navegadores que no soporten gradientes */
+    z-index: 1000;             /* Asegura que esté por encima de otros elementos */
+  }
+  
+
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link,
+  .custom-navbar .btn,
+  .custom-navbar .form-control::placeholder {
+    color: white; /* o el color que desees */
+  }
+
+  /* Cambia el color del texto del input */
+.custom-navbar .form-control {
+    color:#468187 ;
+    background-color: #468187;
+    border: none;
+  }
+
+  
+  /* Botón de búsqueda */
+  .custom-navbar .btn-outline-success {
+    border-color: #468187;
+    background-color: #468187;
+    color: white;
+  }
+  
+  .custom-navbar .btn-outline-success:hover {
+    background-color: white;
+    color: #2C3E50;
+  }
+
+  .card-color {
+    background-color: #1a2935;
+    color: white;
+  }
+
+  .custom-rounded {
+    border-radius: 20px;
+  }
+
+  .badge-custom{
+    background-color: #468187;
+    color: white;
+  }
+
+  .form-control.custom-bg,
+  .form-select.custom-bg {
+    background-color: #468187;
+    border-radius: 10px;
+    border: 0px solid #468187;
+  }
+
+  .navbar .nav-link:hover {
+  color: #9dbebb ;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Invierte los colores (gris -> blanco) */
+}
+
+footer {
+  background-color: #02161f; /* Más oscuro que el #031926 */
+  border-top: 1px solid #1f4d53;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-principal {
+  flex: 1;
+}
