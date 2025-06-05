@@ -23,7 +23,7 @@ Aplicación web desarrollada con **Java** y **Spring Boot**, que permite a los u
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/tu-repositorio.git
+   git clone https://github.com/JaviiixDev/Reminder.me-Web.git
    ```
 
 2. Abre el proyecto en **NetBeans** (usado para el desarrollo).
@@ -52,10 +52,5 @@ Contraseña: admin
 
 ## 📦 Estado del proyecto
 
-✅ Funcional – permite registro de usuarios, inicio de sesión, y operaciones CRUD sobre notas, la tabla usuario y categoria no esta implementada mas que para lectura.
+✅ Funcional – permite inicio de sesión, y operaciones CRUD sobre notas.
 
-## 📄 Licencia
-
-Este proyecto es de uso educativo.
-# Reminder.me-Web
-Aplicación web desarrollada con Spring Boot y Java, que permite realizar operaciones CRUD completas sobre notas. Integra una base de datos MySQL y cuenta con autenticación mediante Spring Security. Ideal para gestionar notas personales o académicas de forma segura.
