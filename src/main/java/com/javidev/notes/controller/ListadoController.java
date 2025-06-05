@@ -23,11 +23,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class ListadoController {
-
+    //declara los service 
     private final NotaService notaService;
     private final CategoriaService categoriaService;
     private final UsuarioService usuarioService;
-
+    //inicializa los service usando el constructor
     public ListadoController(NotaService notaService, CategoriaService categoriaService, UsuarioService usuarioService) {
         this.notaService = notaService;
         this.categoriaService = categoriaService;
@@ -112,6 +112,7 @@ public class ListadoController {
 
         try {
             int id = Integer.parseInt(notaId);
+            //obtiene la nota 
             Optional<Nota> opcionalNota = notaService.buscarPorId(id);
             
             //compara si la nota obtenida es del usuario logeado, si no manda error

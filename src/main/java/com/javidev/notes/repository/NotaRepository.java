@@ -27,12 +27,15 @@ public interface NotaRepository extends JpaRepository <Nota, Integer>{
     List <Nota> buscar(String consulta);
     
     //solo se utilizan las siguientes consultas si se quiere que cada usuario tenga su propia informacion sin acceso a otro usuario
+    //consulta a la base de datos que busca las nuevas notas que tiene cada usuario
     @Query("SELECT n FROM Nota n WHERE n.user_id.userId = :userId ORDER BY n.nota_last_date DESC")
     List<Nota> buscarNuevasNotasPorUsuario(@Param("userId") int userId);
     
+    //consulta a la base de datos que encuentra todas las notas que pertenencen a categorias de un solo usuario
     @Query("SELECT n FROM Nota n WHERE n.cat_id.cat_id = :catId AND n.user_id.userId = :userId")
     List<Nota> buscarPorCategoriaUsuario(@Param("catId") int catId, @Param("userId") int userId);
     
+    //consulta a la base de datos que busca notas dependiendo del titulo, el contenido y el usuario logeado
     @Query("SELECT n FROM Nota n WHERE LOWER(n.nota_title) LIKE LOWER(CONCAT('%', :titulo, '%')) AND n.user_id.userId = :userId")
     List<Nota> buscarPorTituloUsuario(@Param("titulo") String titulo, @Param("userId") int userId);
 

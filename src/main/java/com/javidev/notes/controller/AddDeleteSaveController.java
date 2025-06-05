@@ -25,11 +25,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class AddDeleteSaveController {
-
+    //declaracion de los service
     private final NotaService notaService;
     private final CategoriaService categoriaService;
     private final UsuarioService usuarioService;
-
+    //inicializacion de los service en el constructor
     public AddDeleteSaveController(NotaService notaService,
             CategoriaService categoriaService, UsuarioService usuarioService) {
         this.categoriaService = categoriaService;
@@ -45,8 +45,11 @@ public class AddDeleteSaveController {
      */
     @RequestMapping("/notas/crear")
     public String mostrarCrearNota(Model model) {
+        //manda las categorias al modelo
         model.addAttribute("categorias", categoriaService.buscarTodos());
+        //manda al modelo un objeto nota
         model.addAttribute("nota", new Nota());
+        //abre la pagina crear nota
         return "create_note.html";
     }
 
@@ -71,8 +74,9 @@ public class AddDeleteSaveController {
         // Convertir el cat_id recibido (sólo contiene el ID) a una categoría real
         Categoria categoria = categoriaService.buscarPorId(nota.getCat_id().getCat_id());
         nota.setCat_id(categoria);
-
+        //guarda la nota
         notaService.guardarNota(nota);
+        //dirige a la pantalla de inicio
         return "redirect:/";
     }
 
@@ -95,7 +99,7 @@ public class AddDeleteSaveController {
         if (notaOpt.isPresent() && notaOpt.get().getUser_id().getUserId() == usuario.getUserId()) {
             notaService.eliminarNota(convertedId);
         }
-
+        //redirige a la pantalla de inicio
         return "redirect:/";
     }
 

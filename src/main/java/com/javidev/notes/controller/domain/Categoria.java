@@ -10,7 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 /**
- *
+ *Clase que actua como puente de la base de datos, representa la tabla de la base de datos categoria como objetos
  * @author music
  */
 @Entity

@@ -14,7 +14,7 @@ import jakarta.persistence.ManyToOne;
 import java.time.LocalDate;
 
 /**
- *
+ *Clase que actua como puente de la base de datos, representa la tabla de la base de datos nota como objetos
  * @author music
  */
 @Entity

@@ -22,7 +22,7 @@ public class NotaService {
     public NotaService(NotaRepository notaRepository) {
         this.notaRepository = notaRepository;
     }
-
+    //retorna la lista de notas 
     public List<Nota> buscarNuevasNotas() {
         return notaRepository.buscarTodos();
     }
