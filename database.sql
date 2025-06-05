@@ -60,6 +60,6 @@ INSERT INTO nota (cat_id, user_id, nota_title, nota_content, nota_create_date, n
 (2, 1, 'Cosas personales', 'Llevar la guitarra a reparar, organizar los libros y apuntes de este semestre', '2024-08-15', '2024-08-15');
 
 INSERT INTO nota (cat_id, user_id, nota_title, nota_content, nota_create_date, nota_last_date) VALUES
-(5, 1, 'Lista de compras', 'Comprar cable USB para ESP32, cuaderno nuevo, stickers y adaptador de red', '2025-03-01', '2025-03-02');
+(1, 1, 'Lista de compras', 'Comprar cable USB para ESP32, cuaderno nuevo, stickers y adaptador de red', '2025-03-01', '2025-03-02');
 
 Select * from nota;
